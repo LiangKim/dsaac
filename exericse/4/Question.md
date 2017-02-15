@@ -6,6 +6,8 @@ A
 b. Which nodes are leaves?
 G,H,I,L,M,k
 
+---
+
 ##### 4.2
 
 node|parent|children|siblings|depth|height
@@ -24,11 +26,15 @@ K|F|NULL|NULL|3|0
 L|J|NULL|M|4|0
 M|J|NULL|L|4|0
 
+---
+
 ##### 4.3
 
 What is the depth of the tree?
 
 4
+
+---
 
 ##### 4.4
 
@@ -36,9 +42,17 @@ Show that a binary tree of N nodes, there is N+1 NULL pointers representing chil
 
 N个节点构成的二叉树，必然有2N个子节点，其中除了根节点，每个节点都是另一个节点的子节点（N-1），所以空的节点必然有 2N - (N-1) = N+1 个。
 
+---
+
 ##### 4.5
 
 Show that the maximum number of nodes in a binary tree of heigth H is 2^(H+1) - 1.
 
-归纳法。
+归纳法。  
+H=1, max_nodes = 1  
+...  
+H=k, max_nodes = 2^(k+1) - 1  
+则，当H=k+1时，  
+max_nodes = 2*(2^(k+1)-1)+1 = 2^(k+2) - 1
+成立。
 
